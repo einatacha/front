@@ -1,0 +1,20 @@
+{
+  "folders": [
+	{
+		"path": "..\\.."
+	},
+	{
+		"path": "..\\..\\..\\movies -front\\Movies\\.angular"
+	},
+	{
+		"path": "..\\..\\..\\movies -front\\Movies\\.vscode"
+	},
+	{
+		"path": "..\\..\\..\\movies -front\\Movies\\node_modules"
+	},
+	{
+		"path": "..\\..\\..\\movies -front\\Movies\\src"
+	}
+],
+  "settings": {}
+}

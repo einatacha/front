@@ -1,0 +1,32 @@
+<div class="title-item" *ngFor="let c of category">
+
+  <h2> informações da categoria {{c.id}} <a [routerLink]="['/categoryId/' + c.id]" class="btn btn-outline-dark">Ver
+      mais</a> <a [routerLink]="['/categoryRegister/' + c.id]" class="btn btn-outline-dark">atualizar</a>
+    <div *ngFor="let i of categoryId"></div>
+  </h2>
+  <table>
+
+    <tr>
+
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Linguagem</th>
+
+    </tr>
+
+    <tr>
+      <td>{{c.id}}</td>
+      <td>{{c.name}}</td>
+      <td> {{c.language}}</td>
+
+
+    </tr>
+
+
+
+
+  </table>
+
+
+
+</div>

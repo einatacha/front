@@ -1,0 +1,40 @@
+<div class="container-fluid generate">
+  <main class="container">
+    <h2>Natflix cadastro de filmes</h2>
+    <form [formGroup]="form">
+      <div class="input-field">
+        <input id="ob" formControlName="title" type="text" placeholder="Digite o titulo do filme">
+        <div class="underline"></div>
+      </div>
+      <div class="input-field">
+        <input formControlName="synopsis" type="text " placeholder="Digite a sinopse">
+        <div class="underline"></div>
+      </div>
+      <div class="input-field">
+        <input formControlName="duration" type="text" placeholder="Digite a duração">
+        <div class="underline"></div>
+      </div>
+      <div class="input-field">
+        <input formControlName="releaseDate" type="text" placeholder="Digite o ano de lançamento">
+        <div class="underline"></div>
+      </div>
+      <div class="input-field">
+        <input formControlName="image" type="text" placeholder="Digite a Url da imagem">
+        <div class="underline"></div>
+      </div>
+      <div class="input-field">
+        <select formControlName="category" class="col-12 mb-3" [compareWith]="compareFn">
+          <option [value]="null">Selecione a categoria</option>
+          <option *ngFor="let c of category" [ngValue]="c.id"> {{c.name}}</option>
+        </select>
+
+      </div>
+      <button (click)="createMovies()" class="btn" *ngIf="!moviesId">Salvar </button>
+      <button (click)="putMovies()" class="btn" *ngIf="moviesId">editar</button>
+      <button (click)="deleteMovie()" class="btn" *ngIf="moviesId">Deletar</button>
+    </form>
+
+
+
+  </main>
+</div>

@@ -1,0 +1,33 @@
+<div class="container-fluid generate">
+
+  <main class="container">
+    <h2>Natflix cadastro de dados</h2>
+    <form [formGroup]="form">
+      <div class="input-field">
+        <input formControlName="cellPhone" type="text" placeholder="Digite o umero do seu celular" id="ob">
+        <div class="underline"></div>
+      </div>
+      <div class="input-field">
+        <input formControlName="cpf" type="text " placeholder="Digite seu CPF apenas numeros">
+        <div class="underline"></div>
+      </div>
+      <div class="input-field">
+        <input formControlName="email" type="text" placeholder="Digite seu email">
+        <div class="underline"></div>
+      </div>
+      <div class="input-field">
+        <input formControlName="name" type="text" placeholder="Digite seu nome">
+        <div class="underline"></div>
+      </div>
+      <div class="input-field">
+        <input formControlName="password" type="password" placeholder="digite sua senha">
+        <div class="underline"></div>
+      </div>
+
+
+      <button (click)="createUser()" class="btn" *ngIf="!userId">Salvar</button>
+      <button (click)="putUser()" class="btn" *ngIf="userId">editar</button>
+      <button (click)="deleteUser()" class="btn" *ngIf="userId">Deletar</button>
+    </form>
+  </main>
+</div>
